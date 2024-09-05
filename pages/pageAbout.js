@@ -1,34 +1,29 @@
+import { footer } from "../components/footer.js";
+import { head } from "../components/head.js";
+import { header } from "../components/header.js";
+
 export function pageAbout() {
     return `
-    <!DOCTYPE html>
-    <html lang = "en" >
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Salaries</title>
-    </head>
-    <body>
-    <header>
-        <img src="#" alt="Logo">
-        <nav>
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-        </nav>
-    </header>
+        <!DOCTYPE html>
+        <html lang="en">
+        ${head('Apie projekta', ['main', 'header'])}
+        <body>
+            ${header('/about')}
 
-    <main>
-        <h1>About project</h1>
-        <p>Project, where you can:</p>
-        <h2>User profile:</h2>
-        <ul>
-            <li>Register</li>
-            <li>See all registered users</li>
-            <li>Remove</li>
-            <li>Edit name</li>
-            <li>Edit surname</li>
-        </ul>
-    </main> 
+            <main>
+                <h1>Apie projekta</h1>
+                <p>Projektas, kuriame galima:</p>
+                <h2>Darbuotoju profilis:</h2>
+                <ul>
+                    <li>susikurti</li>
+                    <li>pamatyti visu registruotus darbuotojus (sarasas)</li>
+                    <li>pasalinti</li>
+                    <li>redaguoti varda</li>
+                    <li>redaguoti pavarde</li>
+                </ul>
+            </main>
 
-    </body>
-    </html>`;
+            ${footer()}
+        </body>
+        </html>`;
 }

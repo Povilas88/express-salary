@@ -1,28 +1,22 @@
+import { footer } from "../components/footer.js";
+import { head } from "../components/head.js";
+import { header } from "../components/header.js";
+
 export function page404() {
     return `
-    <!DOCTYPE html>
-    <html lang = "en" >
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Salaries</title>
-    </head>
-    <body>
-    
-    <header>
-        <img src="#" alt="Logo">
-        <nav>
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-        </nav>
-    </header>
+        <!DOCTYPE html>
+        <html lang="en">
+        ${head('404', ['main', 'header'])}
+        <body>
+            ${header()}
 
-    <main>
-        <h1>404</h1>
-        <h2>Page not found</h2>
-        <p>Go to <a href="/">main page</a></p>
-    </main>
-        
-    </body>
-    </html>`;
+            <main>
+                <h1>404</h1>
+                <h2>Norimas puslapis nerastas</h2>
+                <p>Eiti i <a href="/">pagrindini puslapi</a></p>
+            </main>
+
+            ${footer()}
+        </body>
+        </html>`;
 }
